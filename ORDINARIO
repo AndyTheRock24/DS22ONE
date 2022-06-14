@@ -1,0 +1,20 @@
+template <class T> class matrix_t
+{
+private:
+ int m_;
+ int n_;
+
+ T* v_;
+public:
+ matrix_t(void);
+ matrix_t(int m, int n);
+ ~matrix_t(void);
+
+ void resize(int m, int n);
+ T& get_set (int i, int j);
+ T get (int i, int j) const;
+ int get_m(void) const;
+ int get_n(void) const;
+private:
+ int pos(int i, int j) const;
+};
